@@ -192,6 +192,39 @@
   margin-left: 30px;
 }
 
+.features{
+  padding: 185px 0px 100px;
+}
+.features__inner{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.features__item{
+  max-width: 360px;
+  height: 400px;
+  padding: 40px 20px;
+  &:not(:last-child){
+    margin-right: 30px;
+  }
+  &:hover{
+    box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+  }
+  &-img{
+    margin-bottom: 40px;
+  }
+  &-title{
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+  &-text{
+    max-width: 300px;
+    color: $text;
+  }
+}
+
+
 
 
 
