@@ -204,6 +204,7 @@
   max-width: 360px;
   height: 400px;
   padding: 40px 20px;
+  transition: all .3s;
   &:not(:last-child){
     margin-right: 30px;
   }
@@ -222,6 +223,132 @@
     max-width: 300px;
     color: $text;
   }
+}
+
+//start slider
+
+.products-slider{
+  background-color: $grey;
+  padding: 120px 0 110px;
+}
+.product-slider__title{
+  background-color: #fff;
+  padding: 40px 0 40px 30px;
+  border-radius: 6px;
+  box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+  span{
+    width: 110px;
+    height: 45px;
+    background-color: #7347c1;
+    margin-right: 30px;
+    border-radius: 25px;
+  }
+}
+.product__item{
+  background-color: #fff;
+  display: flex!important;
+  &-img{
+    max-width: 500px;
+    width: 100%;
+    min-height: 450px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  &-content{
+    padding: 55px 55px 25px 50px;
+    max-width: 580px;
+    color: $text;
+  }
+  &-title{
+    color: #000;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 15px;
+  }
+  &-info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+  }
+  &-author{
+    display: flex;
+    justify-content: space-between;
+    .avatar{
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-position: center;
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-right: 7px;
+    }
+    span{
+      font-size: 15px;
+      line-height: 30px;
+      color: #000;
+      margin-right: 20px;
+   } 
+  }
+  &-category{
+    font-size: 15px;
+    color: $purple;
+    padding-left: 24px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      background-image: url(../images/icons/wordpress.png);
+      width: 16px;
+      height: 16px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      left: 0;
+      top: 1px;
+    }
+  }
+  &-tags{
+    display: flex;
+    padding: 40px 0px 40px;
+    border-bottom: 1px solid #ececec;
+  }
+  &-btn{
+    font-size: 15px;
+    color: #868c96;
+    margin-right: 7px;
+    background-color: #f1f3f6;
+    padding: 6px 14px;
+    border-radius: 25px;
+    &:hover{
+      color: #fff;
+      background-color: $blue;
+    }
+  }
+  &-buy{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+  }
+  &-price{
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    margin-right: 7px;
+    background-color: $blue;
+    padding: 6px 14px;
+    border-radius: 25px;
+  }
+}
+.rate-star{
+  margin-top: 10px;
 }
 
 
