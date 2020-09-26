@@ -13,5 +13,7 @@ $(function(){
     readOnly: true
   });
 
+  var mixer = mixitup('.products__inner-box');
+
 
 })
