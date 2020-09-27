@@ -28,7 +28,7 @@ body{
   font-size: 30px;
   line-height: 32px;
   background-color: #fff;
-  padding: 40px 0 40px 30px;
+  padding: 40px 0 30px 30px;
   border-radius: 6px;
   box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
   display: flex;
@@ -36,12 +36,15 @@ body{
 }
 .a-left{
   position: absolute;
-  top: -120px;
-  right: 108px; 
+  top: -115px;
+  right: 89px; 
+  padding: 5px 15px;
+  cursor: pointer;
 }
 .a-right{
   position: absolute;
-  top: -120px;
-  right: 53px;
+  top: -115px;
+  padding: 5px 15px;
+  right: 40px;
+  cursor: pointer;
 }
-
