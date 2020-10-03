@@ -64,3 +64,30 @@ body{
     padding-top: 30px;
   }
 }
+.breadcrumbs{
+  margin-bottom: 20px;
+  &__list{
+    li{
+      display: inline-block;
+      position: relative;
+      & + li{
+        padding-left: 25px;
+        &::before{
+          content: '/';
+          position: absolute;
+          left: 8px;
+          color: #fff;
+        }
+      }
+      &:last-child{
+        a, span{
+          color: #bfcad7;
+        }
+      }
+    }
+    a{
+      color: #fff;
+      font-size: 15px;
+    }
+  }
+}

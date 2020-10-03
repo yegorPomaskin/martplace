@@ -26,6 +26,15 @@ $(function(){
     readOnly: true
   });
 
+  $(".js-range-slider").ionRangeSlider({
+    type: "double",
+    min: 0,
+    max: 330,
+    from: 30,
+    to: 300,
+    prefix: "$",
+  });
+
   var mixer = mixitup('.products__inner-box');
 
 
