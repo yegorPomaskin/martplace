@@ -35,6 +35,15 @@ $(function(){
     prefix: "$",
   });
 
+  $(".page-list").on('click', function(){
+    $(".products__item").addClass('list');
+    $(".product-page__items").addClass('wrap');
+  });
+  $(".grid").on('click', function(){
+    $(".products__item").removeClass('list');
+    $(".product-page__items").removeClass('wrap');
+  });
+
   var mixer = mixitup('.products__inner-box');
 
 
