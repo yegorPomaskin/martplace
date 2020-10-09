@@ -91,3 +91,21 @@ body{
     }
   }
 }
+.category-wordpress{
+  padding-left: 21px;
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    background-image: url('../images/icons/wordpress.png');
+    width: 16px;
+    height: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0;
+    top: 1px;
+  }
+ 
+  
+}
