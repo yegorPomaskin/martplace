@@ -1,0 +1,142 @@
+@media (max-width: 1150px){
+  .footer__inner{
+    flex-wrap: wrap;
+  }
+  .footer__col-adress{
+    min-width: 100%;
+    margin-bottom: 30px;
+  }
+  .header__top-list{
+    display: none;
+  }
+}
+@media (max-width: 900px){
+  .footer__inner{
+    justify-content: start;
+  }
+  .footer__social{
+    min-width: 100%;
+    margin-top: 30px;
+  }
+  .menu__search{
+    display: none;
+  }
+}
+@media (max-width: 760px){
+  .notification__box,
+  .message__box{
+    display: none;
+  }
+}
+@media (max-width: 610px){
+  .header__top-inner{
+    height: 70px;
+  }
+  .menu__list{
+    display: none;
+  }
+  .header__btn-menu{
+    width: 70px;
+    height: 70px;
+    &::before{
+      font-size: 20px;
+    }
+  }
+  .header__box{
+    height: 70px;
+  }
+  .header__box{
+    position: absolute;
+    right: 100%;
+    left: -100%;
+    background-color: #eef1f3;
+  }
+  .header__box.active{
+    left: 60px;
+    right: 50px;
+  }
+  .header__btn-menu{
+    display: block;
+  }
+  .header__btn{
+    display: none;
+  }
+  .header__top-inner{
+    justify-content: start;
+  }
+  .menu__list{
+    border: 1px solid #fff;
+    padding-top: 30px;
+    display: none;
+    background-color: #262b30;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    a{
+      color: #fff;
+    }
+    li{
+      display: block;
+      text-align: center;
+      & + li{
+        margin-left: 0;
+      }
+    }
+    .user__menu{
+      display: none;
+    }
+  }
+  .home__box,
+  .product__box,
+  .wordpress__box{
+    margin-top: 0;
+  }
+  .megamenu{
+    display: none;
+  }
+  .user__menu{
+    top: 60px;
+    right: auto;
+    left: 0;
+  }
+  .circle__menu{
+    top: 45px;
+    right: auto;
+  }
+  .circle__info{
+    font-size: 14px;
+    width: auto;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 480px){
+  .footer__col-menu + .footer__col-menu{
+    margin-top: 30px;
+  }
+  .header__btn{
+    margin-right: 10px;
+    width: 100px;
+    font-size: 10px;
+  }
+  .circle__menu{
+    left: auto;
+  }
+}
+@media (max-width: 390px){
+  .header__btn{
+    display: none;
+  }
+  
+}
+@media (max-width: 360px){
+  .footer__social-link{
+    a{
+      margin-top: 10px;
+    }
+  }
+  .basket__box{
+    display: none;
+  }
+}

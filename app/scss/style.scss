@@ -20,6 +20,28 @@
     }
   }
 }
+.header__box{
+  display: flex;
+  align-items: center;
+  transition: all .3s;
+  height: 100px;
+}
+.header-menu__btn{
+  margin-top: 10px;
+  margin-right: 20px;
+  width: 30px;
+  height: 30px;
+  display: block;
+  div{
+    margin-bottom: 3px;
+    background-color: black;
+    display: block;
+    height: 3px;
+  }
+}
+.header__logo{
+  margin-right: 10px;
+}
 .header__btn{
   font-size: 14px;
   line-height: 28px;
@@ -353,10 +375,29 @@
 .message__box,
 .notification__box{
   margin-top: 80px;
+  margin-left: 15px;
 }
-
+.basket{
+  margin-right: 20px;
+}
 .notification__box{
-  margin-left: 50px;
+  margin-left: 20px;
+}
+.header__btn-menu{
+  right: 0;
+  display: none;
+  width: 100px;
+  height: 100px;
+  background-color: $blue;
+  position: absolute;
+  &::before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: #fff;
+  }
 }
 
 .header__circle{
@@ -428,7 +469,7 @@
   margin-bottom: 7px;
 }
 .circle__info{
-  min-width: 200px;
+  width: 200px;
 }
 .circle__info-category{
   font-size: 15px;
@@ -1588,7 +1629,7 @@
   button{
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: -1px;
     background-color: $blue;
     border: none;
     height: 50px;
@@ -1685,7 +1726,7 @@
       width: 110px;
       height: 55px;
       top: 0;
-      right: 10px;
+      right: 0;
       border-radius: 25px;
     }
   }
@@ -2179,6 +2220,6 @@ a.products__item-category.hide{
   
 }
 
-
+@import 'media';
 
 

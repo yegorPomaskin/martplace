@@ -44,6 +44,14 @@ $(function(){
     $(".product-page__items").removeClass('wrap');
   });
 
+  $('.header__btn-menu').on('click', function(){
+    $('.header__box').toggleClass('active');
+  });
+
+  $('.header-menu__btn').on('click', function(){
+    $('.menu__list').slideToggle('active');
+  });
+
   var mixer = mixitup('.products__inner-box');
 
 
