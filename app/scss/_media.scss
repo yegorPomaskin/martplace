@@ -21,6 +21,7 @@
   .menu__search{
     display: none;
   }
+  
 }
 @media (max-width: 760px){
   .notification__box,
@@ -110,6 +111,12 @@
     width: auto;
     margin-right: 10px;
   }
+  .user__box:hover .user__menu::before{
+    left: 150px;
+  }
+  .basket__box:hover .circle__menu::before{
+    left: 3px;
+  }
 }
 @media (max-width: 480px){
   .footer__col-menu + .footer__col-menu{
@@ -122,6 +129,9 @@
   }
   .circle__menu{
     left: auto;
+  }
+  .user__box:hover .user__menu::before{
+    left: 70px;
   }
 }
 @media (max-width: 390px){
