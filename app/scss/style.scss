@@ -2699,6 +2699,36 @@ a.products__item-category.hide{
   }
 }
 //end login
+//start page-404
+
+.page-404__inner{
+  text-align: center;
+  padding: 70px 0 100px;
+  img{
+    margin-bottom: 50px;
+  }
+  a{
+    max-width: 190px;
+    width: 100%;
+    border: none;
+    background-color: $blue;
+    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 25px;
+    padding: 18px 0;
+    outline: none;
+    cursor: pointer;
+  }
+}
+.page-404__message{
+  font-size: 30px;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+
+//end page-404
 
 @import 'media';
 
