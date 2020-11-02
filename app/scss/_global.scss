@@ -1,0 +1,133 @@
+html{
+  box-sizing: border-box;
+}
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+a{
+  display: inline-block;
+  text-decoration: none;
+}
+ul, li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+html, 
+body{
+  height: 100%;
+}
+body{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.container{
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+.main-title{
+  font-size: 30px;
+  line-height: 32px;
+  background-color: #fff;
+  padding: 40px 0 30px 30px;
+  border-radius: 6px;
+  box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+  display: flex;
+  justify-content: space-between;
+}
+.a-left{
+  position: absolute;
+  top: -115px;
+  right: 89px; 
+  padding: 5px 15px;
+  cursor: pointer;
+}
+.a-right{
+  position: absolute;
+  top: -115px;
+  padding: 5px 15px;
+  right: 40px;
+  cursor: pointer;
+}
+.title{
+  text-align: center;
+  font-size: 36px;
+  line-height: 48px;
+  span{
+    color: $blue;
+  }
+  p{
+    font-size: 16px;
+    line-height: 30px;
+    color: $text;
+    max-width: 670px;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+}
+.breadcrumbs{
+  margin-bottom: 20px;
+  &__list{
+    li{
+      display: inline-block;
+      position: relative;
+      & + li{
+        padding-left: 25px;
+        &::before{
+          content: '/';
+          position: absolute;
+          left: 8px;
+          color: #fff;
+        }
+      }
+      &:last-child{
+        a, span{
+          color: #bfcad7;
+        }
+      }
+    }
+    a{
+      color: #fff;
+      font-size: 15px;
+    }
+  }
+}
+.category-wordpress{
+  padding-left: 21px;
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    background-image: url('../images/icons/wordpress.png');
+    width: 16px;
+    height: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0;
+    top: 1px;
+  }
+}
+.main-btn{
+  background-color: $blue;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 40px;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+  transition: all .3s;
+}
