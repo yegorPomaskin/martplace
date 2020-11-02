@@ -148,14 +148,15 @@
     border-radius: 6px;
     height: 120px;
     &::after{
-        content: '';
-        position: absolute;
-        top: -25px;
-        right: 20px;
-        height: 25px;
-        width: 1070px;
-        background-color: #fff;
-       opacity: .5;
+      content: '';
+      position: absolute;
+      top: -25px;
+      right: 20px;
+      height: 25px;
+      max-width: 1070px;
+      width: 100%;
+      background-color: #fff;
+      opacity: .5;
       border-radius: 6px 6px 0px 0px;
     }
     &::before{
@@ -181,6 +182,7 @@
         padding-left: 30px;
         padding-right: 195px;
         position: relative;
+        outline: none;
         &::placeholder{
           color: $form;
         }
@@ -891,6 +893,10 @@
 .products{
   padding: 120px 0 120px;
   background-color: #f6f7fb;
+  .products__item{
+    flex-basis: calc(33.333% - 30px);
+    margin-left: 30px;
+  }
 }
 .products__title{
   margin-bottom: 30px;
@@ -976,6 +982,7 @@
   &-img{
     opacity: 1;
     min-height: 230px;
+    width: 100%;
     display: block;
     background-repeat: no-repeat;
     background-position: center;
@@ -1060,8 +1067,9 @@
 }
 .products__inner-box{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
+  margin-left: -30px;
 }
 .products-btn{
   margin: 0 auto;
@@ -1111,6 +1119,9 @@
 .features__slider{
   background-color: $grey;
   padding: 120px 0;
+  .products__item{
+    margin-left: 0;
+  }
 }
 .features__slider-title{
   margin-bottom: 50px;
@@ -1128,7 +1139,7 @@
 //start statistics
 
 .stats{
-  padding: 90px 0;
+  padding: 90px 60px;
   background-color: #212225;
 }
 .stats__inner{
@@ -1205,7 +1216,7 @@
   }
   &__inner{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     margin-top: 60px;
   }
@@ -1219,6 +1230,9 @@
   position: relative;
   box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
   border-radius: 4px;
+  & + .reasons__item{
+    margin-left: 10px;
+  }
   &-num{
     font-size: 48px;
     font-weight: 300;
@@ -1248,9 +1262,10 @@
   justify-content: space-around;
 }
 .image__item{
+  height: 575px;
   text-align: center;
   width: 100%;
-  padding: 100px 160px;
+  padding: 100px 40px 40px 40px;
   background-repeat: no-repeat;
   background-size: cover;
   &-img{
@@ -1264,6 +1279,8 @@
   &-text{
     color: #fff;
     font-size: 16px;
+    max-width: 590px;
+    margin: 0 auto;
     margin-bottom: 50px;  
   }
   &-link{
@@ -1274,6 +1291,7 @@
     border: none;
     border-radius: 40px;
     font-size: 16px;
+    margin-bottom: 20px;
   }
 }
 
@@ -1326,6 +1344,8 @@
     margin-left: 15px;
     font-size: 20px;
     color: #000;
+    padding-right: 20px;
+    z-index: 2;
   }
   &-job{
     margin-top: 6px;
@@ -1362,8 +1382,10 @@
   margin-top: 60px;
 }
 .news__item{
+  width: 100%;
   max-width: 361px;
   background-color: #fff;
+  flex-wrap: wrap;
   &:not(:last-child){
     margin-right: 15px;
   }
@@ -1376,6 +1398,7 @@
   }
   &-info{
     padding: 30px 15px;
+    height: 175px;
   }
   &-title{
     font-size: 22px;
@@ -1392,6 +1415,8 @@
     padding: 10px;
     display: flex;
     justify-content: space-around;
+    padding: 10px;
+    height: 41px;
   }
   &-box{
     max-width: 180px;
@@ -1965,7 +1990,6 @@
   .products__item{
     width: 260px;
     margin-right: 10px;
-    height: 370px;
   }
   .products__item-buy{
     display: flex;
@@ -2241,6 +2265,9 @@ a.products__item-category.hide{
 .products__search-inner--tal{
   text-align-last: left;
 }
+.large__img{
+  width: 100%;
+}
 .product__search-page-title{
   font-size: 30px;
   line-height: 30px;
@@ -2260,6 +2287,9 @@ a.products__item-category.hide{
 .product-one{
   padding: 70px 0 120px;
   background-color: #eff1f5;
+}
+.jq-selectbox__select{
+  background-color: red;
 }
 .product-one__inner{
   display: flex;
@@ -2436,6 +2466,43 @@ a.products__item-category.hide{
 }
 .price__box{
   padding: 30px;
+  form{
+    label{
+      display: inline-block;
+    }
+  }
+  .jq-checkbox, .jq-radio{
+    margin-top: 3px;
+    top: 20px;
+    right: 0;
+    display: block;
+  }
+  .jq-radio.checked .jq-radio__div {
+    width: 20px;
+    height: 20px;
+    background-color: $blue;
+    cursor: pointer;
+    z-index: 13;
+    transform: translate(-38%, -28%);
+    position: absolute;
+  }
+  .jq-checkbox, .jq-radio{
+    overflow: visible;
+  }
+  .jq-checkbox, .jq-radio {
+    vertical-align: -3px;
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    margin: 0 4px 0 0;
+    border: 4px solid #e6e9ed;
+    background: #fff;
+    cursor: pointer;
+    position: relative;
+  }
+  .jq-radio.checked .jq-radio__div{
+    box-shadow: none;
+  }
 }
 .product__price{
   button{
@@ -2584,9 +2651,14 @@ a.products__item-category.hide{
   }
 }
 .more__inner{
+  margin-left: -30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  .products__item{
+    flex-basis: calc(33.333% - 30px);
+    margin-left: 30px;
+  }
 }
 
 //end more
@@ -2608,6 +2680,9 @@ a.products__item-category.hide{
   border-bottom: 1px solid #e8ebf0;
   padding-bottom: 30px;
 }
+.login__form{
+  padding: 30px 50px 0;
+}
 .login__wrapper{
   max-width: 555px;
   width: 100%;
@@ -2616,8 +2691,8 @@ a.products__item-category.hide{
   text-align: center;
   padding: 60px 0 55px;
   form{
+    padding: 30px 50px 50px;
     text-align: left;
-    padding: 30px 50px 0;
     display: flex;
     flex-direction: column;
     label{
@@ -2718,6 +2793,7 @@ a.products__item-category.hide{
   padding: 70px 0 100px;
   img{
     margin-bottom: 50px;
+    max-width: 100%;
   }
   a{
     max-width: 190px;
@@ -2737,6 +2813,7 @@ a.products__item-category.hide{
   font-size: 30px;
   color: #000000;
   margin-bottom: 40px;
+  line-height: 30px;
 }
 
 //end page-404
@@ -2767,12 +2844,14 @@ a.products__item-category.hide{
 }
 .contact-title{
   font-size: 38px;
+  line-height: 38px;
   color: #000;
   margin-bottom: 30px;
   a{
     color: $blue;
   }
 }
+
 .contact__text{
   color: #555555;
   font-size: 16px;
@@ -2921,6 +3000,11 @@ textarea{
 .works__upload{
   background-color: #eff1f5;
 }
+.works__item-img{
+  img{
+    width: 100%;
+  }
+}
 //end how it works
 //start pricing plan
 
@@ -2933,6 +3017,7 @@ textarea{
 }
 .pricing-plan__title{
   font-size: 36px;
+  line-height: 36px;
   color: #000;
   margin-bottom: 40px;
   a{
@@ -3141,7 +3226,7 @@ textarea{
 }
 .blog__item-name{
   display: flex;
-  align-items: start;
+  align-items: flex-start;
 }
 .blog__item-title{
   font-size: 16px;
@@ -3250,6 +3335,7 @@ textarea{
   font-size: 30px;
   font-weight: 500;
   margin-bottom: 25px;
+  line-height: 30px;
   color: $blue;
 }
 .blog__box-content{

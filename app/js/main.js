@@ -4,15 +4,40 @@ $(function(){
     slidesToShow: 1,
     slidesToScroll: 1,
     prevArrow:"<img class='a-left control-c prev slick-prev' src='../images/icons/arrow-left.png'>",
-    nextArrow:"<img class='a-right control-c next slick-next' src='../images/icons/arrow-right.png'>"
+    nextArrow:"<img class='a-right control-c next slick-next' src='../images/icons/arrow-right.png'>",
+    responsive: [
+      {
+        breakpoint: 610,
+        settings: {
+          arrows: false,
+        }
+      }
+    ]
   });
 
   $('.features__slider-inner').slick({
     slidesToShow: 3,
     slidesToScroll: 3,
     prevArrow:"<img class='a-left control-c prev slick-prev' src='../images/icons/arrow-left.png'>",
-    nextArrow:"<img class='a-right control-c next slick-next' src='../images/icons/arrow-right.png'>"
-  })
+    nextArrow:"<img class='a-right control-c next slick-next' src='../images/icons/arrow-right.png'>",
+    responsive: [
+      {
+        breakpoint: 1150,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      }, 
+      {
+        breakpoint: 760,
+        settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        }
+      }
+    ]
+  });
 
   $(".rate-star").rateYo({
     rating: 5,
@@ -34,6 +59,8 @@ $(function(){
     to: 300,
     prefix: "$",
   });
+
+  $('input[type="radio"], select').styler(); 
 
   $(".page-list").on('click', function(){
     $(".products__item").addClass('list');
@@ -62,6 +89,5 @@ $(function(){
     });
 
   var mixer = mixitup('.products__inner-box');
-
 
 })
